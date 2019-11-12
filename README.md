@@ -8,26 +8,29 @@ nodemon app.js
 pm2 start app.js --watch
 ```
 
+## Heroku Link
+
+[text](https://link)
+
 ## Instructions
 
 For this assignment, you will extend the in-memory API we built in class with new endpoints relating to comments.
 
 Currently, our “database” looks like the following:
 
-``` json
+``` javascript
 const db = {
-  posts: [
-    {
-      id: 1,
-      title: 'Post 1',
-      body: 'something here...'
-    },
-    {
-      id: 2,
-      title: 'Post 2',
-      body: 'something else here...'
-    }
-  ]
+    posts: [{
+            id: 1,
+            title: 'Post 1',
+            body: 'something here...'
+        },
+        {
+            id: 2,
+            title: 'Post 2',
+            body: 'something else here...'
+        }
+    ]
 };
 ```
 
@@ -59,7 +62,8 @@ Assuming this is the first comment created in our “database”, the id would b
 Add the following validation to the POST /api/comments endpoint:
 
 * post is required
-* post must be present in the request payload. If it is missing, send a response with a 400 status code and the following content:
+
+post must be present in the request payload. If it is missing, send a response with a 400 status code and the following content:
 
 ``` json
 {
