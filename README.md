@@ -61,7 +61,7 @@ Assuming this is the first comment created in our “database”, the id would b
 
 Add the following validation to the POST /api/comments endpoint:
 
-* post is required
+* __post is required__
 
 post must be present in the request payload. If it is missing, send a response with a 400 status code and the following content:
 
@@ -73,7 +73,7 @@ post must be present in the request payload. If it is missing, send a response w
 }
 ```
 
-* post must be valid
+* __post must be valid__
 
 If the value in post doesn’t match one of the post ids in our “database”, respond with a 404 status code.
 
