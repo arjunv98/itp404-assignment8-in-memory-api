@@ -116,7 +116,7 @@ app.get("/api/posts/:id/comments", (request, response) => {
   }
 });
 
-app.delete("api/comments/:id", (request, response) => {
+app.delete("/api/comments/:id", (request, response) => {
   // TODO
   const id = Number(request.params.id);
   const comment = db.comments.find(comment => {
@@ -133,7 +133,7 @@ app.delete("api/comments/:id", (request, response) => {
   }
 });
 
-app.put("api/comments/:id", (request, response) => {
+app.put("/api/comments/:id", (request, response) => {
   // TODO
   const id = Number(request.params.id);
   const comment = db.comments.find(comment => {
@@ -148,4 +148,4 @@ app.put("api/comments/:id", (request, response) => {
   }
 });
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);

@@ -93,6 +93,15 @@ This endpoint should update a comment with an `id` of `:id` . The request payloa
 
 ``` json
 {
+  "post": 1,
+  "body": "Updated comment..."
+}
+```
+
+__NOTE: The original instructions say that payload looks like below, but I am assuming that the comment id does not get modified, and the post it is assigned to can be modified.__
+
+``` json
+{
   "id": 1,
   "body": "Updated comment..."
 }
@@ -100,6 +109,9 @@ This endpoint should update a comment with an `id` of `:id` . The request payloa
 
 If the update is successful, return a 204 status code. If the comment doesn’t exist, return a 404 status code.
 
-Submission
+__NOTE: As per instructions above, the response does not return a json of the changed data__
+
+### Submission
+
 Deploy your API to Heroku and add your Heroku link to your your repo’s README.
 
